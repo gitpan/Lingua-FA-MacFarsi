@@ -1,0 +1,12 @@
+Changes
+Makefile.PL
+README
+MANIFEST
+MacFarsi.pm
+MacFarsi.xs
+addition.map
+farsi.map
+mkheader
+t/enc.t
+t/qual.t
+t/test.t
