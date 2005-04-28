@@ -7,9 +7,8 @@ use vars qw($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
 
 require Exporter;
 require DynaLoader;
-require AutoLoader;
 
-$VERSION = '0.03';
+$VERSION = '0.04';
 @ISA = qw(Exporter DynaLoader);
 @EXPORT = qw(decodeMacFarsi encodeMacFarsi);
 @EXPORT_OK = qw(decode encode);
@@ -20,7 +19,7 @@ __END__
 
 =head1 NAME
 
-Lingua::FA::MacFarsi - transcode between Mac OS Farsi encoding and Unicode
+Lingua::FA::MacFarsi - transcoding between Mac OS Farsi encoding and Unicode
 
 =head1 SYNOPSIS
 
@@ -43,7 +42,7 @@ Lingua::FA::MacFarsi - transcode between Mac OS Farsi encoding and Unicode
     $octet = Lingua::FA::MacFarsi::encode($wchar);
 
    # $wchar : a string in Perl's Unicode format
-   # $octet : a legacy byte string (i.e. in MacFarsi)
+   # $octet : a string in Mac OS Farsi encoding
 
 =head1 DESCRIPTION
 
@@ -64,7 +63,7 @@ C<PDF> (or C<U+202C>), C<LRO> (or C<U+202D>), and C<RLO> (or C<U+202E>).
 
 Extended Arabic-Indic Digits and some related characters in Unicode
 are encoded in MacFarsi as if normal digits (C<U+0030>..C<U+0039>)
-when they appears in the left-to-right direction.
+when they appear in the left-to-right direction.
 
 =back
 
@@ -135,26 +134,28 @@ the characters with bidirectional type to be overridden?
 
 =head1 AUTHOR
 
-  SADAHIRO Tomoyuki  SADAHIRO@cpan.org
+SADAHIRO Tomoyuki <SADAHIRO@cpan.org>
 
-  http://homepage1.nifty.com/nomenclator/perl/
+Copyright(C) 2003-2005, SADAHIRO Tomoyuki. Japan. All rights reserved.
 
-  Copyright(C) 2003-2003, SADAHIRO Tomoyuki. Japan. All rights reserved.
-
-This module is free software; you can redistribute it
-and/or modify it under the same terms as Perl itself.
+This module is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.
 
 =head1 SEE ALSO
 
 =over 4
 
-=item Map (external version) from Mac OS Farsi character set to Unicode
+=item Map (external version) from Mac OS Farsi character set
+to Unicode 2.1 and later (version: c02 2005-Apr-05)
 
-http://www.unicode.org/Public/MAPPINGS/VENDORS/APPLE/FARSI.TXT
+L<http://www.unicode.org/Public/MAPPINGS/VENDORS/APPLE/FARSI.TXT>
+
+=item Registry (external version) of Apple use of Unicode corporate-zone
+characters (version: c03 2005-Apr-04)
 
 =item The Bidirectional Algorithm
 
-http://www.unicode.org/unicode/reports/tr9/
+L<http://www.unicode.org/reports/tr9/>
 
 =back
 
