@@ -10,5 +10,11 @@ WriteMakefile(
     'ABSTRACT_FROM'	=> 'MacFarsi.pm',
     'AUTHOR'		=> 'SADAHIRO Tomoyuki <SADAHIRO@cpan.org>',
     'clean'		=> { FILES=> 'fmmacfa.h tomacfa.h' },
+    'PREREQ_PM'	  	=> {
+	DynaLoader	=> 0,
+	Exporter	=> 0,
+	strict		=> 0,
+	warnings	=> 0,
+    },
 );
 

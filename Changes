@@ -1,5 +1,8 @@
 Revision history for Perl module Lingua::FA::MacFarsi.
 
+0.10  Sat Jan 22 20:40:22 2011
+    - xs: fix mixing STDCHAR and U8.
+
 0.04  Thu Apr 28 22:50:40 2005
     - upgraded according to updated FARSI.TXT in www.unicode.org
       (though no character mapping is changed).
