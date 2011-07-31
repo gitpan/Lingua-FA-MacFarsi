@@ -9,6 +9,7 @@ WriteMakefile(
     'VERSION_FROM'	=> 'MacFarsi.pm',
     'ABSTRACT_FROM'	=> 'MacFarsi.pm',
     'AUTHOR'		=> 'SADAHIRO Tomoyuki <SADAHIRO@cpan.org>',
+    'LICENSE'		=> 'perl',
     'clean'		=> { FILES=> 'fmmacfa.h tomacfa.h' },
     'PREREQ_PM'	  	=> {
 	DynaLoader	=> 0,
